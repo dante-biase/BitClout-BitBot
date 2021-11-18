@@ -15,11 +15,11 @@ def stringify_txn(txn):
     return rapidjson.dumps(txn, indent=4, write_mode=rapidjson.WM_PRETTY)
 
     # user = txn.transactor.name if txn.transactor.name else "an anonymous user"
-    # cauc_coins = utils.abbreviate_number(txn.creator_coins, 3)
+    # coins = utils.abbreviate_number(txn.creator_coins, 3)
     # usd = utils.format_as_usd(txn.usd, roundn=True)
 
     # sign, action = ('+', "BOUGHT") if txn.operation_type == "buy" else ('-', "SOLD")
-    # return f"""```diff\n{sign} {user} just {action} {cauc_coins} (~{usd}) CAUC!```"""
+    # return f"""```diff\n{sign} {user} just {action} {coins} (~{usd}) CAUC!```"""
 
 
 @tasks.loop(seconds=0)
